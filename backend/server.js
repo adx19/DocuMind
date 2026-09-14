@@ -17,8 +17,9 @@ const documentRoutes = require(
 
 const app = express();
 
-app.use(cors());
-
+app.use(cors({
+  origin: "https://docu-mind-7x9h.vercel.app"
+}));
 app.use(express.json());
 console.log("NEW SERVER VERSION RUNNING");
 app.use("/api/upload", uploadRoutes);
