@@ -41,8 +41,7 @@ export default function Sidebar({
 	const [documents, setDocuments] =
 		useState<DocumentType[]>([]);
 
-	const API =
-		"http://localhost:8080";
+	const API = process.env.NEXT_PUBLIC_API_URL;
 
 	const fetchDocuments =
 		async () => {

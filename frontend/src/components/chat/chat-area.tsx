@@ -41,7 +41,7 @@ export default function ChatArea() {
 
     try {
       const res = await fetch(
-        "http://localhost:8080/api/chat",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/chat`,
         {
           method: "POST",
           headers: {
